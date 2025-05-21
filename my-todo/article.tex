@@ -1,0 +1,74 @@
+\documentclass[a4paper,8pt]{article}
+
+% Modern font: Fira Sans
+\usepackage[sfdefault]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Page layout and formatting
+\usepackage[left=1cm,right=1cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{booktabs}
+\pagestyle{empty} % No page numbers
+
+% Define custom column types
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} % Centered column
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % Left-aligned column
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X} % Flexible-width column
+
+\renewcommand{\arraystretch}{2} % Taller rows
+
+% Define row height variable
+\newlength{\rowheight}
+\setlength{\rowheight}{30pt}
+
+% Define the table as a command
+\newcommand{\tasktable}{
+\begin{tabularx}{\textwidth}{|C{1.5cm}|C{1.5cm}|Y|C{1.0cm}|}
+  \hline
+  Urgent & Important & Description & Done \\
+  \hline
+  \rule{0pt}{\rowheight} & & & \\
+  \hline
+  \rule{0pt}{\rowheight} & & & \\
+  \hline
+  \rule{0pt}{\rowheight} & & & \\
+  \hline
+  \rule{0pt}{\rowheight} & & & \\
+  \hline
+  \rule{0pt}{\rowheight} & & & \\
+  \hline
+  \rule{0pt}{\rowheight} & & & \\
+  \hline
+  \rule{0pt}{\rowheight} & & & \\
+  \hline
+  \rule{0pt}{\rowheight} & & & \\
+  \hline
+  \rule{0pt}{\rowheight} & & & \\
+  \hline
+  \rule{0pt}{\rowheight} & & & \\
+  \hline
+  \rule{0pt}{\rowheight} & & & \\
+  \hline
+  \rule{0pt}{\rowheight} & & & \\
+  \hline
+  \rule{0pt}{\rowheight} & & & \\
+  \hline
+  \rule{0pt}{\rowheight} & & & \\
+  \hline
+  \rule{0pt}{\rowheight} & & & \\
+  \hline
+  \rule{0pt}{\rowheight} & & & \\
+  \hline
+\end{tabularx}
+}
+
+\begin{document}
+
+\tasktable
+
+\newpage
+
+\tasktable
+
+\end{document}
