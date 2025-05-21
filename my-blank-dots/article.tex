@@ -1,0 +1,33 @@
+\documentclass[a4paper]{article}
+\usepackage{tikz}
+\usepackage[margin=5mm,noheadfoot]{geometry} % Consistent margin of 5mm
+
+\pagestyle{empty} % Removes page numbers
+
+\begin{document}
+
+% First page
+\begin{center}
+    \begin{tikzpicture}
+        \foreach \x in {0.5,1,...,19.5} { % Maintain left-right balance
+            \foreach \y in {0.2,0.7,...,28.7} { % Shift dots slightly lower
+                \fill[black] (\x, \y) circle (0.02cm);
+            }
+        }
+    \end{tikzpicture}
+\end{center}
+
+\newpage % Moves to the second page
+
+% Second page
+\begin{center}
+    \begin{tikzpicture}
+        \foreach \x in {0.5,1,...,19.5} { % Maintain left-right balance
+            \foreach \y in {0.2,0.7,...,28.7} { % Shift dots slightly lower
+                \fill[black] (\x, \y) circle (0.02cm);
+            }
+        }
+    \end{tikzpicture}
+\end{center}
+
+\end{document}
